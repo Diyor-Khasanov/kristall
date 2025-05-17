@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+.home {
+  background: url("../img/bg.png") center no-repeat;
+  color: #fff !important;
+  width: 100%;
+  height: 100vh;
+  .navbar {
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    color: #fff !important;
+    .right {
+      margin-left: 800px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+      a {
+        &:hover {
+          color: #607d8b;
+          transition: 0.5s;
+          font-weight: 600;
+        }
+      }
+    }
+    a {
+      color: #fff;
+    }
+  }
+  .hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    height: 750px;
+    .circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 190px;
+      cursor: pointer;
+    }
+    .left {
+      .title {
+        font-family: "Exo", sans-serif;
+        font-style: italic;
+        font-size: 80px;
+        line-height: 96px;
+        margin-left: 100px;
+        width: 680px;
+      }
+      .subtitle {
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        line-height: 28px;
+        margin-left: 100px;
+        width: 580px;
+        opacity: 0.6;
+      }
+    }
+    .right {
+      li {
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-style: italic;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 30px;
+        a {
+          &:hover {
+            color: #607d8b;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+    a {
+      color: #fff;
+    }
+  }
+}
