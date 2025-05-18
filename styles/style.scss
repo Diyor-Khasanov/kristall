@@ -456,3 +456,62 @@ $grey: #b5b4b4;
     }
   }
 }
+
+.reklama {
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  .head {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    h2 {
+      font-family: "Exo", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 72px;
+      color: #33348e;
+    }
+    span {
+      width: 1100px;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+  .body{
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .reklam{
+      border: 1px solid #E3E3FF;
+      width: 310px;
+      height: 205px;
+      padding-left: 20px;
+      border-radius: 15px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      gap: 1px !important;
+      span{
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        color: #353437;
+      }
+      img{
+      margin-right: 200px;
+      }
+    }
+  }
+}
