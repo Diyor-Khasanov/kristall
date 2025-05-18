@@ -89,7 +89,7 @@ $grey: #b5b4b4;
       cursor: pointer;
     }
     .left {
-      .title {
+      h2 {
         font-family: "Exo", sans-serif;
         font-style: italic;
         font-size: 80px;
@@ -97,13 +97,13 @@ $grey: #b5b4b4;
         margin-left: 100px;
         width: 680px;
       }
-      .subtitle {
+      article {
         font-family: "Roboto", sans-serif;
         font-size: 20px;
         line-height: 28px;
         margin-left: 100px;
-        width: 580px;
         opacity: 0.6;
+        width: 580px;
       }
     }
     .right {
@@ -135,7 +135,7 @@ $grey: #b5b4b4;
   flex-direction: column;
   gap: 20px;
   margin-top: 200px;
-  .title {
+  h2 {
     font-family: "Exo", sans-serif;
     text-align: center;
     font-style: normal;
@@ -144,7 +144,7 @@ $grey: #b5b4b4;
     font-size: 64px;
     color: #33348e;
   }
-  .subtitle {
+  span {
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -438,7 +438,7 @@ $grey: #b5b4b4;
   .about1,
   .about2 {
     text-align: center;
-    .title {
+    h2 {
       font-family: "Exo", sans-serif;
       font-style: normal;
       font-weight: 600;
@@ -446,7 +446,7 @@ $grey: #b5b4b4;
       line-height: 72px;
       color: #33348e;
     }
-    .subtitle {
+    span {
       font-family: "Inter", sans-serif;
       font-style: normal;
       font-weight: 400;
