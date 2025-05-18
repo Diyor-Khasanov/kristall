@@ -429,4 +429,35 @@
 
 .active {
   opacity: 1 !important;
+}
+
+.about {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about .about1,
+.about .about2 {
+  text-align: center;
+}
+.about .about1 .title,
+.about .about2 .title {
+  font-family: "Exo", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 72px;
+  color: #33348e;
+}
+.about .about1 .subtitle,
+.about .about2 .subtitle {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #5d5d5f;
 }/*# sourceMappingURL=style.css.map */

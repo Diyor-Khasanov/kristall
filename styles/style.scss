@@ -427,3 +427,32 @@ $grey: #b5b4b4;
 .active {
   opacity: 1 !important;
 }
+
+.about {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .about1,
+  .about2 {
+    text-align: center;
+    .title {
+      font-family: "Exo", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 72px;
+      color: #33348e;
+    }
+    .subtitle {
+      font-family: "Inter", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      color: #5d5d5f;
+    }
+  }
+}
