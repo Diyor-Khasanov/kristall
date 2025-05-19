@@ -485,13 +485,13 @@ $grey: #b5b4b4;
       line-height: 32px;
     }
   }
-  .body{
+  .body {
     margin-top: 45px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .reklam{
-      border: 1px solid #E3E3FF;
+    .reklam {
+      border: 1px solid #e3e3ff;
       width: 310px;
       height: 205px;
       padding-left: 20px;
@@ -501,7 +501,7 @@ $grey: #b5b4b4;
       align-items: center;
       flex-direction: column;
       gap: 1px !important;
-      span{
+      span {
         font-family: "Roboto", sans-serif;
         font-style: normal;
         font-weight: 500;
@@ -509,9 +509,92 @@ $grey: #b5b4b4;
         line-height: 28px;
         color: #353437;
       }
-      img{
-      margin-right: 200px;
+      img {
+        margin-right: 200px;
       }
     }
   }
+}
+
+.products {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9f9fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  display: flex;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  gap: 30px;
+  max-width: 900px;
+  align-items: center;
+}
+
+.card img {
+  width: 180px;
+  height: auto;
+}
+
+.details {
+  flex: 1;
+}
+
+.details h2 {
+  font-size: 24px;
+  color: #25227a;
+  margin: 0 0 12px;
+}
+
+.details p {
+  margin: 5px 0;
+  color: #444;
+  font-size: 15px;
+}
+
+.info-icon {
+  margin-right: 5px;
+  color: #5c6bc0;
+}
+
+.product-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px 18px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #25227a;
+}
+
+.product-box img {
+  width: 40px;
+  margin-left: 10px;
+}
+
+.button {
+  margin-left: auto;
+  border: 2px solid #d90479;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d90479;
+  font-weight: bold;
+  transform: rotate(-10deg);
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  background: #ffe6f2;
+  cursor: pointer;
 }
