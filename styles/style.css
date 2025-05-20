@@ -498,7 +498,7 @@
   align-items: center;
 }
 .reklama .body .reklam {
-  border: 1px solid #E3E3FF;
+  border: 1px solid #e3e3ff;
   width: 310px;
   height: 205px;
   padding-left: 20px;
@@ -519,4 +519,95 @@
 }
 .reklama .body .reklam img {
   margin-right: 200px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.products .product {
+  margin-top: 50px;
+  margin-bottom: 35px;
+  border: none;
+  border-radius: 50px;
+  background: #fafafb;
+  width: 1480px;
+  height: 450px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 40px;
+}
+.products .product .img {
+  border: 1px solid #e3e3ff;
+  width: 310px;
+  height: 420px;
+  border-radius: 40px;
+}
+.products .product .text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+.products .product .text h2 {
+  font-family: "Exo", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  color: #33348e;
+}
+.products .product .text span {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #7a7bd3;
+  display: flex;
+  align-items: center;
+}
+.products .product .text article {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #33348e;
+}
+.products .product .text .box {
+  width: 320px;
+  height: 160px;
+  margin-top: 80px;
+  border-radius: 30px;
+  border: 1px solid #e3e3ff;
+  cursor: pointer;
+  box-shadow: 0px 0px 17px 3px rgba(75, 93, 107, 0.2);
+}
+.products .product .button {
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e3188b;
+  border-radius: 50%;
+  transform: skew(-10deg);
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #e3188b;
+  cursor: pointer;
+}
+.products .product .button:hover {
+  background: #ffc8e7;
+  transition: 0.4s ease-in-out;
 }/*# sourceMappingURL=style.css.map */
