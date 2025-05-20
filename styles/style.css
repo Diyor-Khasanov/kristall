@@ -589,6 +589,35 @@
   border: 1px solid #e3e3ff;
   cursor: pointer;
   box-shadow: 0px 0px 17px 3px rgba(75, 93, 107, 0.2);
+  display: flex;
+  justify-content: space-between;
+}
+.products .product .text .box .text {
+  padding-left: 30px;
+  padding-top: 20px;
+}
+.products .product .text .box .text h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #33348e;
+  margin-bottom: 50px;
+}
+.products .product .text .box .text a {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #e3188b;
+}
+.products .product .text .box .image {
+  width: 100px;
+  height: 140px;
+  border: 1px solid #e3e3ff;
+  border-radius: 20px;
+  margin-right: 10px;
+  margin-top: 8px;
 }
 .products .product .button {
   width: 280px;
