@@ -663,12 +663,12 @@ $grey: #b5b4b4;
       margin-left: -250px;
     }
   }
-  .text{
+  .text {
     margin-left: -200px;
     display: flex;
     flex-direction: column;
     gap: 35px;
-    h2{
+    h2 {
       font-family: "Exo", sans-serif;
       font-style: italic;
       font-weight: 700;
@@ -676,7 +676,7 @@ $grey: #b5b4b4;
       line-height: 62px;
       color: #33348e;
     }
-    span{
+    span {
       font-family: "Inter", sans-serif;
       font-style: normal;
       font-weight: 400;
@@ -704,6 +704,95 @@ $grey: #b5b4b4;
     &:hover {
       background: #ffc8e7;
       transition: 0.4s ease-in-out;
+    }
+  }
+}
+
+.yangiliklar {
+  margin-left: 100px;
+  margin-top: 100px;
+  h2 {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 35px;
+    font-family: "Exo", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 72px;
+    color: #33348e;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0;
+  }
+  .box.box1{
+    .img{
+      img{
+        margin-top: -25px;
+      }
+    }
+  }
+  .box.box4{
+    .img{
+      img{
+        margin-top: -50px;
+      }
+    }
+  }
+  .box {
+    width: 300px;
+    height: 330px;
+    border: 1px solid #e3e3ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    color: #000;
+    border-radius: 20px;
+    cursor: pointer;
+    &:hover {
+      border: 1px solid #e3188b;
+      transition: 0.3s ease-in;
+    }
+    .img {
+      width: 280px;
+      img {
+        border-radius: 20px;
+        width: 100%;
+      }
+    }
+    .time {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      color: #9a999b;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    h3 {
+      font-family: "Exo", sans-serif;
+      font-weight: light;
+      padding-left: 20px;
+      font-size: 20px;
+      line-height: 28px;
+      color: #33348e;
+      font-style: unset;
+    }
+    .des {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 18px;
+      line-height: 28px;
+      color: #5d5d5f;
+      padding-left: 20px;
     }
   }
 }

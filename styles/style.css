@@ -707,4 +707,85 @@
 .banner .button:hover {
   background: #ffc8e7;
   transition: 0.4s ease-in-out;
+}
+
+.yangiliklar {
+  margin-left: 100px;
+  margin-top: 100px;
+}
+.yangiliklar h2 {
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 35px;
+  font-family: "Exo", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 72px;
+  color: #33348e;
+}
+.yangiliklar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0;
+}
+.yangiliklar .box.box1 .img img {
+  margin-top: -25px;
+}
+.yangiliklar .box.box4 .img img {
+  margin-top: -50px;
+}
+.yangiliklar .box {
+  width: 300px;
+  height: 330px;
+  border: 1px solid #e3e3ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  color: #000;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.yangiliklar .box:hover {
+  border: 1px solid #e3188b;
+  transition: 0.3s ease-in;
+}
+.yangiliklar .box .img {
+  width: 280px;
+}
+.yangiliklar .box .img img {
+  border-radius: 20px;
+  width: 100%;
+}
+.yangiliklar .box .time {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #9a999b;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+.yangiliklar .box h3 {
+  font-family: "Exo", sans-serif;
+  font-weight: light;
+  padding-left: 20px;
+  font-size: 20px;
+  line-height: 28px;
+  color: #33348e;
+  font-style: unset;
+}
+.yangiliklar .box .des {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: #5d5d5f;
+  padding-left: 20px;
 }/*# sourceMappingURL=style.css.map */
