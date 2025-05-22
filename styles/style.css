@@ -877,4 +877,72 @@
 }
 .contact .container .map iframe {
   border-radius: 20px;
+}
+
+.footer {
+  padding-top: 80px;
+  background: #33348e;
+  color: #fff;
+  margin-top: 50px;
+  padding-left: 50px;
+}
+.footer ul {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 50px;
+}
+.footer ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.footer ul li a {
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+.footer ul li a:hover {
+  color: #e3188b;
+  transition: 0.3s ease-in-out;
+}
+.footer .second li {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  cursor: pointer;
+}
+.footer .second li:hover {
+  color: #e3188b;
+  transition: 0.3s ease-in-out;
+}
+.footer .third li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+.footer .third li h4 {
+  margin-top: 70px;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+.footer .third li .third-in {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer .third li .third-in a {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
