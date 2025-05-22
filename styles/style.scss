@@ -728,16 +728,16 @@ $grey: #b5b4b4;
     align-items: center;
     border-radius: 0;
   }
-  .box.box1{
-    .img{
-      img{
+  .box.box1 {
+    .img {
+      img {
         margin-top: -25px;
       }
     }
   }
-  .box.box4{
-    .img{
-      img{
+  .box.box4 {
+    .img {
+      img {
         margin-top: -50px;
       }
     }
@@ -793,6 +793,97 @@ $grey: #b5b4b4;
       line-height: 28px;
       color: #5d5d5f;
       padding-left: 20px;
+    }
+  }
+}
+
+.contact {
+  margin-top: 50px;
+  margin-left: 100px;
+  h2 {
+    font-family: "Exo", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 72px;
+    color: #33348e;
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    border-radius: 0;
+    color: #000;
+    .text {
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 50px;
+        li {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+          font-family: "Roboto", sans-serif;
+          font-weight: 500;
+          font-style: normal;
+          font-size: 18px;
+          line-height: 28px;
+          color: #000;
+        }
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        h3 {
+          font-family: "Roboto", sans-serif;
+          font-style: normal;
+          font-size: 20px;
+          line-height: 32px;
+          color: #33348e;
+        }
+        .inputs {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          input {
+            padding: 10px;
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            color: #33348e;
+            border: 1px solid #e3e3ff;
+            outline: none;
+            border-radius: 15px;
+            width: 270px;
+          }
+        }
+        a {
+          font-family: sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 28px;
+          text-align: center;
+          color: #fff;
+          background: #e3188b;
+          padding: 10px;
+          border: 0;
+          border-radius: 15px;
+          cursor: pointer;
+          margin-bottom: 50px;
+        }
+      }
+    }
+    .map {
+      margin-left: 200px;
+      iframe {
+        border-radius: 20px;
+      }
     }
   }
 }
