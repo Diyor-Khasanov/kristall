@@ -3,420 +3,417 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="./styles/style.css" />
-    <script
-      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"
-      defer
-    ></script>
-    <script
-      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"
-      defer
-    ></script>
-    <script src="script.js" defer></script>
-    <title>KRISTALL OSH TUZI</title>
+    <title>KRISTALL TUZ - Luxury Salt Crystals</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <!-- Home -->
-    <div class="home">
-      <div class="navbar">
-        <a href="#!" class="logo">Logo</a>
-
-        <div class="right">
-          <a href="#!" class="number">+998-95-067-36-55</a>
-          <a href="#!" class="gmail">baxacap@gmail.com</a>
-        </div>
-      </div>
-
-      <div class="hero">
-        <div class="left">
-          <h2 class="title">KRISTALL TUZ - ВЫСШИЙ СОРТ</h2>
-          <article class="subtitle">
-            Ovqatlanadigan yodlangan tuz deyarli har qanday taomga ajoyib
-            qo'shimcha hisoblanadi
-          </article>
-        </div>
-
-        <div class="mid">
-          <div class="circle">
-            <img src="./img/katalog.png" alt="katalog" />
-          </div>
-        </div>
-
-        <ul class="right">
-          <li><a href="#">Asosiy sahifa</a></li>
-          <li><a href="#company">Kompaniya haqida</a></li>
-          <li><a href="#reklama">Mahsulotlar</a></li>
-          <li><a href="#yangiliklar">Yangiliklar</a></li>
-          <li><a href="#contact">Kontakt</a></li>
-        </ul>
-      </div>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="salt-crystal"></div>
+      <div class="salt-crystal"></div>
+      <div class="salt-crystal"></div>
     </div>
 
-    <!-- Kompaniya haqida -->
-    <div class="company" id="company">
-      <h2 class="title">Kompaniya haqida</h2>
-      <span class="subtitle">
-        Bugungi kunda "KRISTALL OSH TUZI" - bu xalq tomonidan tan olingan eng
-        sifatli tuz. "KRISTALL OSH TUZI" butun O'zbekiston Respublikasi bo'ylab
-        yetkazib beriladi. Davlat standartlariga mos keladi. Hozirda
-        kompaniyamiz turli navlarni ishlab chiqarmoqda.
-      </span>
-    </div>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <a href="#" class="logo">
+            <span class="logo__crystal">◊</span>
+            <span class="logo__text">KRISTALL<span>TUZ</span></span>
+          </a>
 
-    <!-- SLIDER -->
-    <div class="container">
-      <div class="slider">
-        <div class="box1 box">
-          <div class="bg"></div>
-          <div class="details">
-            <h1>I'm the first Box</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci
-              pellentesque eget.
-            </p>
-            <!-- <button>Check Now</button> -->
-          </div>
+          <div class="nav-container">
+            <nav class="nav">
+              <ul class="nav__links">
+                <li>
+                  <a href="#home" class="nav__link active" data-text="Home"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a href="#products" class="nav__link" data-text="Products"
+                    >Products</a
+                  >
+                </li>
+                <li>
+                  <a href="#about" class="nav__link" data-text="About">About</a>
+                </li>
+                <li>
+                  <a href="#gallery" class="nav__link" data-text="Gallery"
+                    >Gallery</a
+                  >
+                </li>
+                <li>
+                  <a href="#contact" class="nav__link" data-text="Contact"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
 
-          <div class="illustration"><div class="inner"></div></div>
-        </div>
+            <div class="header__actions">
+              <button
+                class="theme-toggle"
+                id="themeToggle"
+                aria-label="Toggle theme"
+              >
+                <span class="theme-toggle__icon">
+                  <i class="fas fa-moon"></i>
+                </span>
+              </button>
 
-        <div class="box2 box">
-          <div class="bg"></div>
-          <div class="details">
-            <h1>I'm the second Box</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci
-              pellentesque eget.
-            </p>
-            <button>Check Now</button>
-          </div>
-
-          <div class="illustration"><div class="inner"></div></div>
-        </div>
-
-        <div class="box3 box">
-          <div class="bg"></div>
-          <div class="details">
-            <h1>I'm the third Box</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci
-              pellentesque eget.
-            </p>
-            <button>Check Now</button>
-          </div>
-
-          <div class="illustration"><div class="inner"></div></div>
-        </div>
-
-        <div class="box4 box">
-          <div class="bg"></div>
-          <div class="details">
-            <h1>I'm the fourth Box</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci
-              pellentesque eget.
-            </p>
-            <button>Check Now</button>
-          </div>
-
-          <div class="illustration"><div class="inner"></div></div>
-        </div>
-
-        <div class="box5 box">
-          <div class="bg"></div>
-          <div class="details">
-            <h1>I'm the fifth Box</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci
-              pellentesque eget.
-            </p>
-            <button>Check Now</button>
-          </div>
-
-          <div class="illustration"><div class="inner"></div></div>
-        </div>
-      </div>
-
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="prev"
-        width="56.898"
-        height="91"
-        viewBox="0 0 56.898 91"
-      >
-        <path
-          d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z"
-          transform="translate(0 91) rotate(-90)"
-          fill="#fff"
-        />
-      </svg>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="next"
-        width="56.898"
-        height="91"
-        viewBox="0 0 56.898 91"
-      >
-        <path
-          d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z"
-          transform="translate(56.898) rotate(90)"
-          fill="#fff"
-        />
-      </svg>
-      <div class="trail">
-        <div class="box1 active">1</div>
-        <div class="box2">2</div>
-        <div class="box3">3</div>
-        <div class="box4">4</div>
-        <div class="box5">5</div>
-      </div>
-    </div>
-
-    <!-- About -->
-    <div class="about">
-      <div class="about1">
-        <h2 class="title">25+</h2>
-        <span class="subtitle">yildan ortiq O`zbekistonda yetakchi</span>
-      </div>
-      <div class="about2">
-        <h2 class="title">500K+</h2>
-        <span class="subtitle">dan ortiq do`konlar bilan ishlash</span>
-      </div>
-    </div>
-
-    <!-- Reklama -->
-    <div class="reklama" id="reklama">
-      <div class="head">
-        <h2>Mahsulotlar</h2>
-        <span
-          >Bizning ishimiz rivojlangan xizmat modeli va sifatga e'tiborga
-          asoslangan. "ORZU OSH TUZI" ni tanlab, ishlab chiqarish uzilishlarsiz
-          ishlashiga, buyurtma qilingan tuzning har doim o'z vaqtida etkazib
-          berilishiga, shuningdek bozorda eng yaxshi mahsulot qiymatiga ega
-          bo'lishingizga kafolat olasiz.</span
-        >
-      </div>
-
-      <div class="body">
-        <div class="reklam">
-          <img src="./img/1.png" alt="1" />
-          <span>Halal sertifikatiga ega bo`lgan Kristall Osh Tuzi</span>
-        </div>
-        <div class="reklam">
-          <img src="./img/2.png" alt="1" />
-          <span>Eng saralangan va tozalangan tuzlar</span>
-        </div>
-        <div class="reklam">
-          <img src="./img/3.png" alt="1" />
-          <span>O`zbekiston bozoridagi ko`p yillik tajriba</span>
-        </div>
-        <div class="reklam">
-          <img src="./img/4.png" alt="1" />
-          <span>Katta savdo markazlari bilan hamkorliklar</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Products -->
-    <div class="products">
-      <div class="product">
-        <div class="img"></div>
-        <div class="text">
-          <h2>Kristall tuz 1kg</h2>
-          <span><img src="./img/tarkib.png" alt="tarkib" /> Tarkibi:</span>
-          <article>
-            NaCl>98,2%, Йод=(40,0+/-15,0)10-4 %, Калий йодат-KIO3, ISO 9001:2015
-          </article>
-          <span><img src="./img/info.png" alt="info" /> To'liq ma'lumot</span>
-          <div class="box">
-            <div class="text">
-              <h3>Kristall tuz 1kg</h3>
-              <a href="#">1 kg</a>
+              <button
+                class="hamburger"
+                id="hamburger"
+                aria-label="Toggle navigation"
+              >
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+              </button>
             </div>
-            <div class="image"></div>
           </div>
         </div>
-        <div class="button">Batafsil</div>
       </div>
+    </header>
 
-      <div class="product">
-        <div class="img"></div>
-        <div class="text">
-          <h2>Kristall tuz 2kg</h2>
-          <span><img src="./img/tarkib.png" alt="tarkib" /> Tarkibi:</span>
-          <article>
-            NaCl>98,2%, Йод=(40,0+/-15,0)10-4 %, Калий йодат-KIO3, ISO 9001:2015
-          </article>
-          <span><img src="./img/info.png" alt="info" /> To'liq ma'lumot</span>
-          <div class="box">
-            <div class="text">
-              <h3>Kristall tuz 2kg</h3>
-              <a href="#">2 kg</a>
-            </div>
-            <div class="image"></div>
-          </div>
-        </div>
-        <div class="button">Batafsil</div>
-      </div>
-    </div>
-
-    <!-- Banner -->
-    <div class="banner">
-      <div class="img">
-        <img src="./img/bottleBack.png" alt="" />
-        <img src="./img/bottleFront.png" class="front" alt="" />
-      </div>
-      <div class="text">
-        <h2>KRISTALL OSH TUZI - ВЫСШИЙ СОРТ</h2>
-        <span
-          >Bizning ishimiz rivojlangan xizmat modeli va sifatga e'tiborga
-          asoslangan. "KRISTALL OSH TUZI" ni tanlab, ishlab chiqarish
-          uzilishlarsiz ishlashiga, buyurtma qilingan tuzning har doim o'z
-          vaqtida etkazib berilishiga</span
-        >
-      </div>
-      <div class="button">Batafsil</div>
-    </div>
-
-    <!-- News -->
-    <div class="yangiliklar" id="yangiliklar">
-      <h2>Yangiliklar</h2>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero__particles" id="particles-js"></div>
 
       <div class="container">
-        <div class="box box1">
-          <div class="img">
-            <img src="./img/box1.jpg" alt="" />
-          </div>
-          <span class="time"
-            ><img src="./img/kalendar.png" alt="" /> 21.05.2025</span
-          >
-          <h3>ЙОДИРОВАННАЯ СОЛЬ</h3>
-          <span class="des"
-            >Йодированная соль Йод - основной компонент гормоно...</span
-          >
-        </div>
+        <div class="hero__content">
+          <h1 class="hero__title">
+            <span class="hero__title-line">Premium</span>
+            <span class="hero__title-line"
+              >Salt <span class="text--accent">Crystals</span></span
+            >
+          </h1>
 
-        <div class="box">
-          <div class="img">
-            <img src="./img/box2.jpg" alt="" />
-          </div>
-          <span class="time"
-            ><img src="./img/kalendar.png" alt="" /> 21.05.2025</span
-          >
-          <h3>СОЛЬ СДЕЛАЕТ ЛЮБОЕ БЛЮДО...</h3>
-          <span class="des">Соль сделает любое блюдо вкуснее!</span>
-        </div>
+          <p class="hero__subtitle">
+            Nature's purest mineral treasure, crafted for culinary excellence
+          </p>
 
-        <div class="box">
-          <div class="img">
-            <img src="./img/box3.jpg" alt="" />
+          <div class="hero__buttons">
+            <a href="#products" class="btn btn--primary btn--shine">
+              <span>Explore Collection</span>
+              <i class="fas fa-gem"></i>
+            </a>
+            <a href="#about" class="btn btn--outline">
+              <span>Discover More</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
           </div>
-          <span class="time"
-            ><img src="./img/kalendar.png" alt="" /> 21.05.2025</span
-          >
-          <h3>КАКАЯ СОЛЬ ЛУЧШЕ — КРУПНАЯ...</h3>
-          <span class="des">Какая соль лучше — крупная или мелкая?</span>
-        </div>
-
-        <div class="box box4">
-          <div class="img">
-            <img src="./img/box4.jpg" alt="" />
-          </div>
-          <span class="time"
-            ><img src="./img/kalendar.png" alt="" /> 21.05.2025</span
-          >
-          <h3>10 ФАКТОВ О СОЛИ</h3>
-          <span class="des">10 фактов о соли</span>
         </div>
       </div>
-    </div>
 
-    <!-- Kontakt -->
-    <div class="contact" id="contact">
-      <h2>Kontakt</h2>
+      <a href="#products" class="hero__scroll" aria-label="Scroll down">
+        <div class="hero__scroll-icon"></div>
+      </a>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products" id="products">
       <div class="container">
-        <div class="text">
-          <ul>
-            <li>
-              <img src="./img/manzil.png" alt="" />
-              Samarkand
-            </li>
-
-            <li>
-              <img src="./img/phone.png" alt="" />
-              +99895-067-36-55
-            </li>
-
-            <li>
-              <img src="./img/mail.png" alt="" />
-              baxacap@gmail.com
-            </li>
-          </ul>
-
-          <form>
-            <h3>Biz bilan bog'laning</h3>
-            <div class="inputs">
-              <input type="text" placeholder="Ism" />
-              <input type="tel" placeholder="Nomer" />
-            </div>
-            <a>Jo'natish</a>
-          </form>
+        <div class="section__header">
+          <h2 class="section__title">
+            Our <span class="text--accent">Premium</span> Selection
+          </h2>
+          <p class="section__subtitle">
+            Each crystal tells a story of purity and perfection
+          </p>
+          <div class="section__divider">
+            <div class="section__divider-line"></div>
+            <div class="section__divider-icon">◊</div>
+            <div class="section__divider-line"></div>
+          </div>
         </div>
 
-        <div class="map">
-          <div style="position: relative; overflow: hidden">
-            <iframe
-              src="https://yandex.uz/map-widget/v1/?ll=59.233167%2C43.328493&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNDg3MTcwMzQ3EixPyrt6YmVraXN0b24sIFFvcmFxYWxwb2fKu2lzdG9uIFJlc3B1Ymxpa2FzaSIKDRTea0IVTY8uQg%2C%2C&z=7.51"
-              width="750"
-              height="500"
-              frameborder="0"
-              allowfullscreen="true"
-              style="position: relative"
-            ></iframe>
+        <div class="products__grid" id="productsGrid">
+          <!-- Products loaded via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="about__content">
+          <div class="about__text">
+            <h2 class="section__title">
+              The Art of <span class="text--accent">Salt Harvesting</span>
+            </h2>
+
+            <div class="about__features">
+              <div class="feature">
+                <div class="feature__icon">◊</div>
+                <h3 class="feature__title">Ancient Methods</h3>
+                <p class="feature__text">
+                  Preserving traditional techniques for authentic flavor
+                </p>
+              </div>
+
+              <div class="feature">
+                <div class="feature__icon">◊</div>
+                <h3 class="feature__title">Sustainable Sourcing</h3>
+                <p class="feature__text">
+                  Ethically harvested from pristine locations worldwide
+                </p>
+              </div>
+
+              <div class="feature">
+                <div class="feature__icon">◊</div>
+                <h3 class="feature__title">Mineral Rich</h3>
+                <p class="feature__text">
+                  Naturally containing 84 essential trace minerals
+                </p>
+              </div>
+            </div>
+
+            <a href="#gallery" class="btn btn--primary btn--rounded">
+              <span>Our Process</span>
+              <i class="fas fa-play"></i>
+            </a>
+          </div>
+
+          <div class="about__image">
+            <div class="image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Salt harvesting"
+                class="image-main"
+              />
+              <div class="image-overlay"></div>
+              <div class="image-frame"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- footer -->
+    <!-- Gallery Section -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">
+            Crystal <span class="text--accent">Gallery</span>
+          </h2>
+          <p class="section__subtitle">
+            Witness the natural beauty of our salt formations
+          </p>
+        </div>
+
+        <div class="gallery__container">
+          <div class="gallery__slider" id="gallerySlider">
+            <!-- Gallery items loaded via JS -->
+          </div>
+
+          <button class="gallery__nav gallery__nav--prev" id="galleryPrev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="gallery__nav gallery__nav--next" id="galleryNext">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">
+            Voices of <span class="text--accent">Appreciation</span>
+          </h2>
+          <p class="section__subtitle">
+            What our valued customers say about us
+          </p>
+        </div>
+
+        <div class="testimonials__grid" id="testimonialsGrid">
+          <!-- Testimonials loaded via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact__content">
+          <div class="contact__info">
+            <h2 class="section__title">
+              Get In <span class="text--accent">Touch</span>
+            </h2>
+            <p class="contact__text">
+              We'd love to hear from you about our products or any special
+              requests
+            </p>
+
+            <div class="contact__details">
+              <div class="contact__item">
+                <div class="contact__icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact__text">
+                  <h3>Location</h3>
+                  <p>123 Crystal Avenue, Mineral City</p>
+                </div>
+              </div>
+
+              <div class="contact__item">
+                <div class="contact__icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact__text">
+                  <h3>Phone</h3>
+                  <p>+1 234 567 8900</p>
+                </div>
+              </div>
+
+              <div class="contact__item">
+                <div class="contact__icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact__text">
+                  <h3>Email</h3>
+                  <p>contact@kristalltuz.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact__social">
+              <a href="#" class="social__link" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social__link" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social__link" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social__link" aria-label="Pinterest">
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact__form">
+            <form id="contactForm">
+              <div class="form__group">
+                <input type="text" id="name" required />
+                <label for="name">Your Name</label>
+                <div class="form__underline"></div>
+              </div>
+
+              <div class="form__group">
+                <input type="email" id="email" required />
+                <label for="email">Your Email</label>
+                <div class="form__underline"></div>
+              </div>
+
+              <div class="form__group">
+                <input type="text" id="subject" required />
+                <label for="subject">Subject</label>
+                <div class="form__underline"></div>
+              </div>
+
+              <div class="form__group">
+                <textarea id="message" required></textarea>
+                <label for="message">Your Message</label>
+                <div class="form__underline"></div>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--block">
+                <span>Send Message</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-      <ul class="first">
-        <li><a href="#company">Kompaniya haqida</a></li>
-        <li><a href="#reklama">Mahsulotlar</a></li>
-        <li><a href="#">Logo</a></li>
-        <li><a href="#yangiliklar">Yangiliklar</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__logo">
+            <a href="#" class="logo">
+              <span class="logo__crystal">◊</span>
+              <span class="logo__text">KRISTALL<span>TUZ</span></span>
+            </a>
+            <p class="footer__tagline">
+              Nature's purest crystals, perfected for you
+            </p>
+          </div>
 
-      <ul class="second">
-        <li><img src="./img/footer/manzil.png" alt=""> Samarkand</li>
-        <li><img src="./img/footer/tel.png" alt=""> +99895-067-36-55</li>
-        <li><img src="./img/footer/mail.png" alt=""> baxacap@gmail.com</li>
-      </ul>
+          <div class="footer__links">
+            <div class="footer__column">
+              <h3 class="footer__title">Explore</h3>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+              </ul>
+            </div>
 
-      <ul class="third">
-        <li>
-          <h4>Biz ijtimoiy tarmoqlardamiz</h4>
-          <ul class="third-in">
-            <a href="https://www.facebook.com/baxastarley?locale=ru_RU">
-              <img src="./img/footer/facebook.png" alt="">
-            </a>
-            <a href="https://www.instagram.com/ixtiyor_1/">
-              <img src="./img/footer/instagram.png" alt="">
-            </a>
-            <a href="https://t.me/mineralsaltcompany">
-              <img src="./img/footer/telegram.png" alt="">
-            </a>
-          </ul>
-        </li>
-        <li>&copy; 2025 TechBridge</li>
-      </ul>
+            <div class="footer__column">
+              <h3 class="footer__title">Products</h3>
+              <ul>
+                <li><a href="#">Premium Salt</a></li>
+                <li><a href="#">Himalayan Pink</a></li>
+                <li><a href="#">Sea Salt</a></li>
+                <li><a href="#">Bath Salts</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__column">
+              <h3 class="footer__title">Legal</h3>
+              <ul>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Returns</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__newsletter">
+            <h3 class="footer__title">Newsletter</h3>
+            <p>Subscribe for updates and special offers</p>
+            <form id="newsletterForm">
+              <div class="newsletter__group">
+                <input type="email" placeholder="Your Email" required />
+                <button type="submit" class="newsletter__button">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            &copy; 2023 KRISTALL TUZ. All rights reserved.
+          </p>
+          <div class="footer__payment">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-paypal"></i>
+            <i class="fab fa-cc-apple-pay"></i>
+          </div>
+        </div>
+      </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
