@@ -1,0 +1,68 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: $breakpoint-xs) {
+      @content;
+    }
+  }
+  @if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm) {
+      @content;
+    }
+  }
+  @if $breakpoint == md {
+    @media (max-width: $breakpoint-md) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg) {
+      @content;
+    }
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin text-gradient($gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin hover-effect {
+  transition: $transition-medium;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-md;
+  }
+}
+
+@mixin crystal-shape($size, $color) {
+  width: $size;
+  height: $size;
+  background: $color;
+  clip-path: polygon(
+    50% 0%,
+    80% 10%,
+    100% 35%,
+    90% 60%,
+    80% 100%,
+    50% 80%,
+    20% 100%,
+    10% 60%,
+    0% 35%,
+    20% 10%
+  );
+}
