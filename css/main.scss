@@ -1,0 +1,119 @@
+// Abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "abstracts/animations";
+
+// Base
+@import "base/reset";
+@import "base/typography";
+@import "base/utilities";
+
+// Components
+@import "components/buttons";
+@import "components/cards";
+@import "components/forms";
+@import "components/preloader";
+
+// Layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/grid";
+@import "layout/navigation";
+
+// Pages
+@import "pages/home";
+@import "pages/products";
+@import "pages/contact";
+
+// Theme
+@import "themes/dark";
+
+// Main styles
+body {
+  font-family: $font-primary;
+  background-color: $color-bg;
+  color: $color-text;
+  line-height: 1.6;
+  transition: $transition-medium;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+
+  @include respond(md) {
+    padding: 0 $spacing-sm;
+  }
+}
+
+.section {
+  padding: $spacing-xl 0;
+
+  @include respond(md) {
+    padding: $spacing-lg 0;
+  }
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: $spacing-lg;
+
+  .section__title {
+    font-size: 2.5rem;
+    margin-bottom: $spacing-sm;
+    position: relative;
+    display: inline-block;
+
+    @include respond(md) {
+      font-size: 2rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(to right, $color-primary, $color-secondary);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .section__subtitle {
+    font-size: 1.2rem;
+    color: $color-text-muted;
+    max-width: 700px;
+    margin: 0 auto;
+
+    @include respond(md) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.text--accent {
+  color: $color-secondary;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+  }
+}
+
+// Dark theme class
+.dark-theme {
+  background-color: $color-bg-darkmode;
+  color: $color-text-light;
+
+  // Import all dark theme overrides
+  @import "themes/dark";
+}
