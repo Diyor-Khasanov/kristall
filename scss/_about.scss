@@ -1,0 +1,147 @@
+.about {
+  background-color: $light-color;
+
+  &-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+
+    @include responsive(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-text {
+    p {
+      margin-bottom: $spacing-unit;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: $spacing-unit * 2;
+
+    @include responsive(sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-sm;
+    transition: $transition-fast;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: $shadow-md;
+    }
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $primary-color;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    color: $gray-color;
+  }
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-md;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 400px;
+
+  @include responsive(md) {
+    height: 300px;
+  }
+}
+
+.slider-slide {
+  min-width: 100%;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.slider-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  text-align: center;
+  font-weight: 500;
+}
+
+.slider-nav {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.slider-prev,
+.slider-next {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  @include flex-center;
+  transition: $transition-fast;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.slider-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: $transition-fast;
+
+  &.active {
+    background-color: white;
+    transform: scale(1.2);
+  }
+}
