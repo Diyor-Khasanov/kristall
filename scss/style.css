@@ -549,4 +549,106 @@
 }
 .news:hover .news-title {
   color: #3a86ff;
+}
+
+.contact {
+  background: linear-gradient(135deg, rgba(58, 134, 255, 0.05) 0%, rgba(131, 56, 236, 0.05) 100%);
+}
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+}
+.contact-info .info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+.contact-info .info-item:last-child {
+  margin-bottom: 0;
+}
+.contact-info .info-icon {
+  width: 3rem;
+  height: 3rem;
+  background-color: #3a86ff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+.contact-info h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+.contact-info p {
+  color: #6c757d;
+}
+.contact .social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.contact .social-links .social-link {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  color: #6c757d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+.contact .social-links .social-link:hover {
+  background-color: #3a86ff;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.contact-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+@media (max-width: 576px) {
+  .contact-form {
+    padding: 1rem;
+  }
+}
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+.contact-form .form-group:last-child {
+  margin-bottom: 0;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.2s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #3a86ff;
+  box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.1);
+}
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+.contact-form button[type=submit] {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
