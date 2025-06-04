@@ -1,0 +1,37 @@
+// Colors
+$primary-color: #3a86ff;
+$secondary-color: #8338ec;
+$accent-color: #ff006e;
+$light-color: #f8f9fa;
+$dark-color: #212529;
+$gray-color: #6c757d;
+$light-gray: #e9ecef;
+
+// Fonts
+$primary-font: "Montserrat", sans-serif;
+$secondary-font: "Playfair Display", serif;
+
+// Spacing
+$spacing-unit: 1rem;
+$section-padding: 5rem 0;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Shadows
+$shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+// Border radius
+$border-radius-sm: 0.25rem;
+$border-radius-md: 0.5rem;
+$border-radius-lg: 1rem;
+
+// Transition
+$transition-fast: all 0.2s ease;
+$transition-medium: all 0.3s ease;
+$transition-slow: all 0.5s ease;
