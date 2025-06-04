@@ -651,4 +651,142 @@
 }
 .contact-form button[type=submit] {
   width: 100%;
+}
+
+.footer {
+  background-color: #212529;
+  color: white;
+  padding: 4rem 0 2rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 768px) {
+  .footer-col:first-child {
+    grid-column: 1/-1;
+    text-align: center;
+  }
+}
+.footer-logo {
+  height: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.footer-title {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+.footer-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2px;
+  background-color: #3a86ff;
+}
+@media (max-width: 768px) {
+  .footer-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+.footer-links li:last-child {
+  margin-bottom: 0;
+}
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.2s ease;
+}
+.footer-links a:hover {
+  color: white;
+  padding-left: 0.25rem;
+}
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.footer-social a {
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+.footer-social a:hover {
+  background-color: #3a86ff;
+  transform: translateY(-3px);
+}
+.footer .newsletter-form {
+  display: flex;
+  margin-top: 1.5rem;
+}
+.footer .newsletter-form input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+.footer .newsletter-form input:focus {
+  outline: none;
+}
+.footer .newsletter-form button {
+  background-color: #3a86ff;
+  color: white;
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.footer .newsletter-form button:hover {
+  background-color: #0767ff;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media (max-width: 576px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.footer-legal {
+  display: flex;
+  gap: 1.5rem;
+}
+@media (max-width: 576px) {
+  .footer-legal {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+.footer-legal a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+.footer-legal a:hover {
+  color: white;
 }/*# sourceMappingURL=style.css.map */

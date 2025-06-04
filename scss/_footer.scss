@@ -1,0 +1,155 @@
+.footer {
+  background-color: $dark-color;
+  color: white;
+  padding: $spacing-unit * 4 0 $spacing-unit * 2;
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: $spacing-unit * 3;
+  }
+
+  &-col {
+    &:first-child {
+      @include responsive(md) {
+        grid-column: 1 / -1;
+        text-align: center;
+      }
+    }
+  }
+
+  &-logo {
+    height: 2.5rem;
+    margin-bottom: $spacing-unit * 1.5;
+  }
+
+  &-title {
+    font-size: 1.25rem;
+    margin-bottom: $spacing-unit * 1.5;
+    color: white;
+    position: relative;
+    padding-bottom: 0.5rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 2.5rem;
+      height: 2px;
+      background-color: $primary-color;
+
+      @include responsive(md) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &-links {
+    li {
+      margin-bottom: 0.75rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: rgba(white, 0.7);
+      transition: $transition-fast;
+
+      &:hover {
+        color: white;
+        padding-left: 0.25rem;
+      }
+    }
+  }
+
+  &-social {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    a {
+      color: white;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background-color: rgba(white, 0.1);
+      @include flex-center;
+      transition: $transition-fast;
+
+      &:hover {
+        background-color: $primary-color;
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  .newsletter-form {
+    display: flex;
+    margin-top: $spacing-unit * 1.5;
+
+    input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: $border-radius-md 0 0 $border-radius-md;
+      font-family: $primary-font;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      border-radius: 0 $border-radius-md $border-radius-md 0;
+      padding: 0 1rem;
+      cursor: pointer;
+      transition: $transition-fast;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+
+  &-bottom {
+    border-top: 1px solid rgba(white, 0.1);
+    padding-top: $spacing-unit * 1.5;
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @include responsive(sm) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &-legal {
+    display: flex;
+    gap: 1.5rem;
+
+    @include responsive(sm) {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    a {
+      color: rgba(white, 0.7);
+      font-size: 0.85rem;
+      transition: $transition-fast;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
