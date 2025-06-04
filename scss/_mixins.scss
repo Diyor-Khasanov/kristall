@@ -1,0 +1,56 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+  @if $breakpoint == md {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
+  @if $breakpoint == xl {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin text-gradient($color1, $color2) {
+  background: linear-gradient(to right, $color1, $color2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin card-hover-effect {
+  transition: $transition-medium;
+  &:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: $shadow-lg;
+  }
+}
