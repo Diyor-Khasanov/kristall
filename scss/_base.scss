@@ -6,26 +6,37 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
   font-family: $primary-font;
-  color: $dark-color;
+  color: $text-color;
   line-height: 1.6;
   background-color: $light-color;
   transition: $transition-medium;
+
+  &.dark-theme {
+    background-color: $dark-bg;
+    color: $dark-text;
+  }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $secondary-font;
-  font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: $spacing-unit;
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+}
+
+section {
+  padding: $section-padding;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -38,178 +49,73 @@ ul {
   list-style: none;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 $spacing-unit * 1.5;
-}
-
-.section {
-  padding: $section-padding;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: $spacing-unit * 0.5;
-  @include text-gradient($primary-color, $secondary-color);
-
-  @include responsive(md) {
-    font-size: 2rem;
-  }
-}
-
-.section-subtitle {
-  text-align: center;
-  color: $gray-color;
-  margin-bottom: $spacing-unit * 2;
-  font-size: 1.1rem;
-
-  @include responsive(md) {
-    margin-bottom: $spacing-unit * 1.5;
-  }
-}
-
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: $border-radius-lg;
-  font-weight: 500;
+  border-radius: $border-radius-md;
+  font-weight: 600;
   text-align: center;
-  transition: $transition-fast;
-  border: none;
   cursor: pointer;
+  transition: $transition-fast;
+  border: 2px solid transparent;
 
   &-primary {
     background-color: $primary-color;
-    color: white;
+    color: $white;
 
     &:hover {
       background-color: darken($primary-color, 10%);
       transform: translateY(-2px);
+      box-shadow: $shadow-sm;
     }
   }
 
   &-secondary {
     background-color: $secondary-color;
-    color: white;
+    color: $white;
 
     &:hover {
       background-color: darken($secondary-color, 10%);
       transform: translateY(-2px);
+      box-shadow: $shadow-sm;
     }
   }
 
   &-outline {
     background-color: transparent;
-    border: 2px solid $primary-color;
+    border-color: $primary-color;
     color: $primary-color;
 
     &:hover {
       background-color: $primary-color;
-      color: white;
+      color: $white;
     }
   }
 }
 
-.text-center {
+.section-header {
   text-align: center;
-}
+  margin-bottom: 3rem;
 
-// Additional base styles
-::selection {
-  background-color: rgba($primary-color, 0.8);
-  color: white;
-}
+  h2 {
+    font-family: $secondary-font;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: $dark-color;
 
-// Scrollbar styling (for webkit browsers)
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: $light-gray;
-}
-
-::-webkit-scrollbar-thumb {
-  background: $primary-color;
-  border-radius: 5px;
-
-  &:hover {
-    background: darken($primary-color, 10%);
+    .dark-theme & {
+      color: $white;
+    }
   }
-}
 
-// Helper classes
-.mt-1 {
-  margin-top: $spacing-unit * 0.25;
-}
-.mt-2 {
-  margin-top: $spacing-unit * 0.5;
-}
-.mt-3 {
-  margin-top: $spacing-unit;
-}
-.mt-4 {
-  margin-top: $spacing-unit * 1.5;
-}
-.mt-5 {
-  margin-top: $spacing-unit * 3;
-}
+  p {
+    font-size: 1.1rem;
+    color: $text-light;
 
-.mb-1 {
-  margin-bottom: $spacing-unit * 0.25;
-}
-.mb-2 {
-  margin-bottom: $spacing-unit * 0.5;
-}
-.mb-3 {
-  margin-bottom: $spacing-unit;
-}
-.mb-4 {
-  margin-bottom: $spacing-unit * 1.5;
-}
-.mb-5 {
-  margin-bottom: $spacing-unit * 3;
-}
-
-.pt-1 {
-  padding-top: $spacing-unit * 0.25;
-}
-.pt-2 {
-  padding-top: $spacing-unit * 0.5;
-}
-.pt-3 {
-  padding-top: $spacing-unit;
-}
-.pt-4 {
-  padding-top: $spacing-unit * 1.5;
-}
-.pt-5 {
-  padding-top: $spacing-unit * 3;
-}
-
-.pb-1 {
-  padding-bottom: $spacing-unit * 0.25;
-}
-.pb-2 {
-  padding-bottom: $spacing-unit * 0.5;
-}
-.pb-3 {
-  padding-bottom: $spacing-unit;
-}
-.pb-4 {
-  padding-bottom: $spacing-unit * 1.5;
-}
-.pb-5 {
-  padding-bottom: $spacing-unit * 3;
+    .dark-theme & {
+      color: lighten($dark-text, 20%);
+    }
+  }
 }
 
 // Animations
@@ -239,89 +145,4 @@ img {
 
 .slide-up {
   animation: slideUp 0.5s ease forwards;
-}
-
-// Loading spinner (for potential AJAX operations)
-.loading-spinner {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  border: 3px solid rgba($primary-color, 0.3);
-  border-radius: 50%;
-  border-top-color: $primary-color;
-  animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-// Tooltips
-[data-tooltip] {
-  position: relative;
-
-  &::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: $dark-color;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: $border-radius-sm;
-    font-size: 0.8rem;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: $transition-fast;
-    z-index: 100;
-  }
-
-  &:hover::after {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(-0.5rem);
-  }
-}
-
-// Accessibility
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-// Print styles
-@media print {
-  .header,
-  .footer,
-  .theme-toggle {
-    display: none !important;
-  }
-
-  body {
-    background-color: white !important;
-    color: black !important;
-    font-size: 12pt;
-  }
-
-  .section {
-    padding: 1rem 0 !important;
-    page-break-inside: avoid;
-  }
-
-  a::after {
-    content: " (" attr(href) ")";
-    font-size: 0.8em;
-    font-weight: normal;
-  }
 }

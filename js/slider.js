@@ -1,44 +1,49 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const sliderTrack = document.querySelector(".slider-track");
-  const slides = document.querySelectorAll(".slider-slide");
-  const dots = document.querySelectorAll(".dot");
+  const slider = document.querySelector(".slider");
+  const slides = document.querySelectorAll(".slide");
   const prevBtn = document.querySelector(".slider-prev");
   const nextBtn = document.querySelector(".slider-next");
+  const dotsContainer = document.querySelector(".slider-dots");
 
-  let currentIndex = 0;
+  let currentSlide = 0;
   const slideCount = slides.length;
 
-  // Initialize slider
-  function updateSlider() {
-    sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-    // Update dots
-    dots.forEach((dot, index) => {
-      dot.classList.toggle("active", index === currentIndex);
-    });
-  }
-
-  // Next slide
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % slideCount;
-    updateSlider();
-  }
-
-  // Previous slide
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + slideCount) % slideCount;
-    updateSlider();
-  }
-
-  // Click on dot
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      currentIndex = index;
-      updateSlider();
-    });
+  // Create dots
+  slides.forEach((_, index) => {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (index === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => goToSlide(index));
+    dotsContainer.appendChild(dot);
   });
 
-  // Button events
+  const dots = document.querySelectorAll(".dot");
+
+  // Initialize slider
+  function showSlide(index) {
+    slides.forEach((slide) => slide.classList.remove("active"));
+    dots.forEach((dot) => dot.classList.remove("active"));
+
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+    currentSlide = index;
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slideCount;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+    showSlide(currentSlide);
+  }
+
+  function goToSlide(index) {
+    showSlide(index);
+  }
+
+  // Event listeners
   nextBtn.addEventListener("click", nextSlide);
   prevBtn.addEventListener("click", prevSlide);
 
@@ -46,12 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
   let slideInterval = setInterval(nextSlide, 5000);
 
   // Pause on hover
-  const sliderContainer = document.querySelector(".slider-container");
-  sliderContainer.addEventListener("mouseenter", () => {
+  slider.addEventListener("mouseenter", () => {
     clearInterval(slideInterval);
   });
 
-  sliderContainer.addEventListener("mouseleave", () => {
+  slider.addEventListener("mouseleave", () => {
     slideInterval = setInterval(nextSlide, 5000);
   });
 
@@ -59,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let touchStartX = 0;
   let touchEndX = 0;
 
-  sliderContainer.addEventListener(
+  slider.addEventListener(
     "touchstart",
     (e) => {
       touchStartX = e.changedTouches[0].screenX;
@@ -68,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { passive: true }
   );
 
-  sliderContainer.addEventListener(
+  slider.addEventListener(
     "touchend",
     (e) => {
       touchEndX = e.changedTouches[0].screenX;
@@ -79,11 +83,12 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   function handleSwipe() {
-    const difference = touchStartX - touchEndX;
-    if (difference > 50) {
-      nextSlide(); // Swipe left
-    } else if (difference < -50) {
-      prevSlide(); // Swipe right
+    if (touchEndX < touchStartX - 50) {
+      nextSlide();
+    }
+
+    if (touchEndX > touchStartX + 50) {
+      prevSlide();
     }
   }
 });

@@ -1,0 +1,42 @@
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: map-get($breakpoints, sm)) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: map-get($breakpoints, sm)) {
+  // Add specific styles if needed
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: map-get($breakpoints, md)) {
+  // Add specific styles if needed
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: map-get($breakpoints, lg)) {
+  // Add specific styles if needed
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: map-get($breakpoints, xl)) {
+  // Add specific styles if needed
+}
+
+// Extra extra large devices (larger desktops, 1400px and up)
+@media (min-width: map-get($breakpoints, xxl)) {
+  .container {
+    max-width: 1320px;
+  }
+}

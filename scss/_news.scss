@@ -1,91 +1,116 @@
-.news {
-  &-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+.news-section {
+  background-color: $light-color;
+
+  .dark-theme & {
+    background-color: $dark-bg;
+  }
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.news-card {
+  background-color: $white;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  box-shadow: $shadow-md;
+  transition: $transition-medium;
+
+  .dark-theme & {
+    background-color: $dark-card;
   }
 
-  &-card {
-    background-color: white;
-    border-radius: $border-radius-lg;
-    overflow: hidden;
-    box-shadow: $shadow-sm;
-    transition: $transition-medium;
-    @include card-hover-effect;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-lg;
   }
 
-  &-image {
+  .news-image {
     position: relative;
     height: 200px;
+    overflow: hidden;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: $transition-medium;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
     }
   }
 
-  &-date {
+  .news-date {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    left: 1rem;
     background-color: $primary-color;
-    color: white;
+    color: $white;
     padding: 0.5rem;
     text-align: center;
     border-radius: $border-radius-sm;
     line-height: 1;
 
-    .date-day {
+    .day {
       font-size: 1.5rem;
       font-weight: 700;
       display: block;
     }
 
-    .date-month {
-      font-size: 0.8rem;
+    .month {
+      font-size: 0.9rem;
       text-transform: uppercase;
     }
   }
 
-  &-content {
-    padding: $spacing-unit * 1.5;
+  .news-content {
+    padding: 1.5rem;
+
+    h3 {
+      font-family: $secondary-font;
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      color: $dark-color;
+
+      .dark-theme & {
+        color: $white;
+      }
+    }
+
+    p {
+      color: $text-light;
+      margin-bottom: 1rem;
+
+      .dark-theme & {
+        color: lighten($dark-text, 20%);
+      }
+    }
   }
 
-  &-title {
-    font-size: 1.25rem;
-    margin-bottom: $spacing-unit * 0.75;
-    transition: $transition-fast;
-  }
-
-  &-excerpt {
-    color: $gray-color;
-    margin-bottom: $spacing-unit;
-    font-size: 0.95rem;
-  }
-
-  &-link {
+  .read-more {
     display: inline-flex;
     align-items: center;
     color: $primary-color;
     font-weight: 500;
-    font-size: 0.9rem;
 
     i {
       margin-left: 0.5rem;
       transition: $transition-fast;
     }
 
-    &:hover {
-      color: darken($primary-color, 10%);
-
-      i {
-        transform: translateX(3px);
-      }
+    &:hover i {
+      transform: translateX(3px);
     }
   }
+}
 
-  &:hover &-title {
-    color: $primary-color;
+@media (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }

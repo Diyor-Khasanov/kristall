@@ -1,84 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
-    <title>Kristall - Premium tuz mahsulotlari</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kristall - Premium Tuz Mahsulotlari</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <meta
-      name="description"
-      content="Kristal Tuz — 100% tabiiy, sog‘lomlik uchun foydali tuz mahsulotlari. Mahalliy va eksportga mo‘ljallangan eng sifatli tuzlar bizda."
-    />
-
-    <!-- Keywords (ixtiyoriy, lekin hali foydali) -->
-    <meta
-      name="keywords"
-      content="tuz, kristal tuz, tabiiy tuz, sog‘lom tuz, tuz ishlab chiqarish, tuz mahsulotlari"
-    />
-
-    <!-- Author -->
-    <meta name="author" content="Kristal Tuz" />
-
-    <!-- Viewport (mobil moslashuvchanlik uchun) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Open Graph (Facebook, Telegram uchun) -->
-    <meta property="og:title" content="Kristal Tuz — 100% Toza Mahsulotlar" />
-    <meta
-      property="og:description"
-      content="Tabiiy va foydali tuz mahsulotlari. Kristal Tuz bilan sog‘lom hayotga yo‘l oling."
-    />
-    <meta
-      property="og:image"
-      content="https://kristal-tuz.uz/images/og-image.jpg"
-    />
-    <meta property="og:url" content="https://kristal-tuz.uz" />
-    <meta property="og:type" content="website" />
-
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <meta
-      name="description"
-      content="Kristal Tuz — 100% tabiiy va foydali tuz mahsulotlari. Sifatli tuzni bizdan oling."
-    />
-    <meta
-      name="keywords"
-      content="kristal tuz, tuz mahsulotlari, tabiiy tuz, sifatli tuz"
-    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="logo.png" type="image/png" />
   </head>
   <body>
     <!-- Header -->
     <header class="header">
       <div class="container">
-        <a href="#" class="logo">
-          <img src="images/logo.svg" alt="Kristall Logo" />
-        </a>
-        <nav class="nav">
-          <ul class="nav-list">
-            <li><a href="#home" class="nav-link active">Asosiy</a></li>
-            <li><a href="#about" class="nav-link">Biz Haqimizda</a></li>
-            <li><a href="#products" class="nav-link">Mahsulotlar</a></li>
-            <li><a href="#news" class="nav-link">Yangiliklar</a></li>
-            <li><a href="#contact" class="nav-link">Kontakt</a></li>
+        <nav class="navbar">
+          <a href="#" class="logo">
+            <img src="./images/logo.png" alt="" />
+            <span>Kristall</span>
+          </a>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#home" class="nav-link active">Asosiy</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">Biz haqimizda</a>
+            </li>
+            <li class="nav-item">
+              <a href="#products" class="nav-link">Mahsulotlarimiz</a>
+            </li>
+            <li class="nav-item">
+              <a href="#news" class="nav-link">Yangiliklar</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Kontakt</a>
+            </li>
+            <li class="nav-item theme-toggle-container">
+              <button id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+              </button>
+            </li>
           </ul>
-          <div class="theme-toggle">
-            <input type="checkbox" id="theme-switch" class="theme-switch" />
-            <label for="theme-switch" class="theme-label">
-              <i class="fas fa-sun"></i>
-              <i class="fas fa-moon"></i>
-              <span class="theme-ball"></span>
-            </label>
-          </div>
           <div class="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -88,374 +56,369 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h1 class="hero-title">Toza Tuz. Toza Hayot</h1>
-        <p class="hero-subtitle">
-          Kristall premium tuz mahsulotlarining tabiiy yaxshiliklarini kashf
-          eting
-        </p>
-        <a href="#products" class="btn btn-primary">Mahsulotlarimiz</a>
-      </div>
-      <div class="salt-particle" id="salt-particle-1"></div>
-      <div class="salt-particle" id="salt-particle-2"></div>
-      <div class="salt-particle" id="salt-particle-3"></div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-      <div class="container">
-        <h2 class="section-title">Merosimiz</h2>
-        <p class="section-subtitle">
-          20 yildan ortiq tuz sohasidagi mukammallik
-        </p>
-
-        <div class="about-content">
-          <div class="about-text">
+    <!-- Main Content -->
+    <main>
+      <!-- Home Section -->
+      <section id="home" class="home-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <h1>Toza tuz. Toza hayot.</h1>
             <p>
-              2001-yilda tashkil topgan Kristall kompaniyasi an’anaviy usullarni
-              zamonaviy texnologiyalar bilan uyg‘unlashtirib, eng sof tuz
-              mahsulotlarini yetkazib berishda ilg‘orlardan biri bo‘lib
-              kelmoqda.
+              Tabiat qalbidan eng yaxshi sifatli tuz mahsulotlarini kashf eting
             </p>
-            <p>
-              Tuzimiz beg‘ubor hududlardan olinadi va tabiiy minerallar hamda iz
-              elementlarini saqlab qolish uchun ehtiyotkorlik bilan qayta
-              ishlanadi.
-            </p>
-            <div class="stats">
-              <div class="stat-item">
-                <span class="stat-number" data-count="100">20</span>+
-                <span class="stat-label">Yillik tajriba</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number" data-count="50">13</span>+
-                <span class="stat-label">Xizmat qilinayotgan mamlakatlar</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number" data-count="1000">1000</span>+
-                <span class="stat-label">Xursand mijozlar</span>
+            <a href="#products" class="btn btn-primary"
+              >Mahsulotlarimizni ko'rib chiqing</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Bizning Tariximiz</h2>
+            <p>21 yillik tuz tajribasi</p>
+          </div>
+          <div class="about-content">
+            <div class="about-text">
+              <h3>Kristall tuzining merosi</h3>
+              <p>
+                2004 yilda asos solingan Kristall tuz ishlab chiqarishda
+                kashshof bo'lgan, yetkazib berish uchun zamonaviy texnologiyalar
+                bilan an'anaviy usullarni birlashtirish eng toza tuz
+                mahsulotlari.
+              </p>
+              <p>
+                Bizning tuzimiz tegmagan qadimgi er osti konlaridan keladi
+                zamonaviy ifloslanish, eng yuqori sifatli va tabiiylikni
+                ta'minlash mineral tarkibi.
+              </p>
+              <div class="stats">
+                <div class="stat-item">
+                  <span class="stat-number" data-count="21">0</span>+
+                  <span class="stat-label">Yillik Tajriba</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number" data-count="20">0</span>+
+                  <span class="stat-label">Tashqi eksport davlatlari</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number" data-count="1000">0</span>+
+                  <span class="stat-label">Xursand mijozlar</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="about-slider">
-            <div class="slider-container">
-              <div class="slider-track">
-                <div class="slider-slide active">
-                  <img src="images/factory-1.jpg" alt="Kristall Factory" />
-                  <div class="slider-caption">
-                    Zamonaviy texnologiyalar bilan jihozlangan ishlab chiqarish
-                    korxonamiz
+            <div class="about-slider">
+              <div class="slider-container">
+                <div class="slider">
+                  <div class="slide active">
+                    <img src="images/factory-1.jpg" alt="Kristall Factory" />
+                    <div class="slide-caption">
+                      Bizning zamonaviy ishlab chiqarish majmuamiz
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <img src="images/factory-2.jpg" alt="Salt Harvesting" />
+                    <div class="slide-caption">
+                      Barqaror hosil yig'ish jarayoni
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <img src="images/factory-3.jpg" alt="Quality Control" />
+                    <div class="slide-caption">Qattiq sifat nazorati</div>
                   </div>
                 </div>
-                <div class="slider-slide">
-                  <img src="images/factory-2.jpg" alt="Salt Harvesting" />
-                  <div class="slider-caption">
-                    Atrof-muhitga zarar yetkazmaydigan tuz ishlab chiqarish
-                    jarayoni
-                  </div>
+                <div class="slider-controls">
+                  <button class="slider-prev">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button class="slider-next">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
                 </div>
-                <div class="slider-slide">
-                  <img src="images/factory-3.jpg" alt="Quality Control" />
-                  <div class="slider-caption">
-                    Qat'iy sifat nazorati standartlari
-                  </div>
+                <div class="slider-dots"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products Section -->
+      <section id="products" class="products-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Mahsulotlarimiz</h2>
+            <p>Har qanday ehtiyoj uchun yuqori sifatli tuz</p>
+          </div>
+          <div class="products-grid">
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/product-1.jpg" alt="Himalayan Pink Salt" />
+                <div class="product-badge">Mashhur</div>
+              </div>
+              <div class="product-info">
+                <h3>Kristall Tuz 1kg</h3>
+                <p>Minerallarga boy, pishirish va sog'liq uchun foyda.</p>
+                <div class="product-actions">
+                  <span class="product-price">4.300 sum</span>
                 </div>
               </div>
-              <div class="slider-nav">
-                <button class="slider-prev">
-                  <i class="fas fa-chevron-left"></i>
-                </button>
-                <div class="slider-dots">
-                  <span class="dot active"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/product-2.jpg" alt="Sea Salt Flakes" />
+              </div>
+              <div class="product-info">
+                <h3>Kristall Tuz 2kg</h3>
+                <p>
+                  Nozik piramida shaklidagi yoriqlar tez eriydi, ovaqatlarni
+                  ideallashtirish tugatish uchun.
+                </p>
+                <div class="product-actions">
+                  <span class="product-price">6.800 sum</span>
                 </div>
-                <button class="slider-next">
-                  <i class="fas fa-chevron-right"></i>
-                </button>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/product-3.jpg" alt="Black Lava Salt" />
+                <div class="product-badge">Yangi</div>
+              </div>
+              <div class="product-info">
+                <h3>Bek Barakot 500 gr</h3>
+                <p>
+                  Dramatik rang va nozik tutunli ta'mga ega mayda tuz, taqdimot
+                  uchun ajoyib.
+                </p>
+                <div class="product-actions">
+                  <span class="product-price">1.900 sum</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Products Section -->
-    <section id="products" class="products section">
-      <div class="container">
-        <h2 class="section-title">Mahsulotlarimiz</h2>
-        <p class="section-subtitle">Har qanday ehtiyoj uchun yuqori sifat</p>
-
-        <div class="products-grid">
-          <div class="product-card">
-            <div class="product-image">
-              <img src="images/salt-1.jpg" alt="Himalayan Pink Salt" />
-              <div class="product-3d"></div>
-            </div>
-            <h3 class="product-title">Himalayan Pink Salt</h3>
-            <p class="product-desc">
-              Rich in minerals with a distinctive pink hue, perfect for gourmet
-              cooking.
-            </p>
-            <div class="product-footer">
-              <span class="product-price">$8.99</span>
-              <button class="btn btn-outline">Learn More</button>
-            </div>
+      <!-- News Section -->
+      <section id="news" class="news-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>So'nggi Xabarlar</h2>
+            <p>Kristall bilan rivojlaning</p>
           </div>
-
-          <div class="product-card">
-            <div class="product-image">
-              <img src="images/salt-2.jpg" alt="Sea Salt" />
-              <div class="product-3d"></div>
-            </div>
-            <h3 class="product-title">Mediterranean Sea Salt</h3>
-            <p class="product-desc">
-              Harvested from the clean waters of the Mediterranean, with a
-              delicate flavor.
-            </p>
-            <div class="product-footer">
-              <span class="product-price">$7.49</span>
-              <button class="btn btn-outline">Learn More</button>
-            </div>
+          <div class="news-grid">
+            <article class="news-card">
+              <div class="news-image">
+                <img src="images/news-1.jpg" alt="Sustainable Mining" />
+                <div class="news-date">
+                  <span class="day">15</span>
+                  <span class="month">Iyun</span>
+                </div>
+              </div>
+              <div class="news-content">
+                <h3>Barqaror konchilik amaliyotlari</h3>
+                <p>
+                  Kristall yangi ekologik toza kon qazish usullarini joriy
+                  qilmoqda atrof-muhitga ta'sirini 40% ga kamaytirish.
+                </p>
+              </div>
+            </article>
+            <article class="news-card">
+              <div class="news-image">
+                <img src="images/news-2.jpg" alt="New Product Line" />
+                <div class="news-date">
+                  <span class="day">28</span>
+                  <span class="month">May</span>
+                </div>
+              </div>
+              <div class="news-content">
+                <h3>Yangi infuzion tuz liniyasi</h3>
+                <p>
+                  O'tlar bilan to'ldirilgan tuzlarning yangi assortimentini
+                  kashf eting organik tatlar bilan yuqori sifatli tuz.
+                </p>
+              </div>
+            </article>
+            <article class="news-card">
+              <div class="news-image">
+                <img src="images/news-3.jpg" alt="Award Winning" />
+                <div class="news-date">
+                  <span class="day">05</span>
+                  <span class="month">May</span>
+                </div>
+              </div>
+              <div class="news-content">
+                <h3>Xalqaro sifat mukofoti</h3>
+                <p>
+                  Kristall nufuzli Oltin Kristal mukofotini oladi mahsulot
+                  sifati va innovatsiya.
+                </p>
+              </div>
+            </article>
           </div>
+        </div>
+      </section>
 
-          <div class="product-card">
-            <div class="product-image">
-              <img src="images/salt-3.jpg" alt="Black Salt" />
-              <div class="product-3d"></div>
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Biz bilan bog'laning</h2>
+            <p>Sizning fikringizni eshitishdan xursandmiz</p>
+          </div>
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info-text">
+                  <h4>Manzil</h4>
+                  <p>Samarqand, O'zbekiston</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="info-text">
+                  <h4>Telefon raqam</h4>
+                  <p>+998 (95) 067 36 55</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info-text">
+                  <h4>Elektron pochta</h4>
+                  <p>baxacap@gmail.com</p>
+                </div>
+              </div>
+              <div class="social-links">
+                <a href="#" class="social-link"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </div>
             </div>
-            <h3 class="product-title">Volcanic Black Salt</h3>
-            <p class="product-desc">
-              A unique sulfurous salt with striking color and distinctive taste.
-            </p>
-            <div class="product-footer">
-              <span class="product-price">$12.99</span>
-              <button class="btn btn-outline">Learn More</button>
+            <div class="contact-form">
+              <form id="contactForm">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Ismingiz"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Elektron pochta manzilingiz"
+                    required
+                  />
+                </div>
+                <div class="form-group"></div>
+                <div class="form-group">
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Xabaringiz"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Yuborish</button>
+              </form>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- News Section -->
-    <section id="news" class="news section">
-      <div class="container">
-        <h2 class="section-title">So'nggi yangiliklar</h2>
-        <p class="section-subtitle">
-          Kristall yangiliklaridan xabardor bo‘ling
-        </p>
-
-        <div class="news-grid">
-          <article class="news-card">
-            <div class="news-image">
-              <img src="images/salt-1.jpg" alt="News 1" />
-              <div class="news-date">
-                <span class="date-day">15</span>
-                <span class="date-month">Iyun</span>
-              </div>
-            </div>
-            <div class="news-content">
-              <h3 class="news-title">
-                Kristall barqaror ishlab chiqarish bo‘yicha mukofotni qo‘lga
-                kiritdi
-              </h3>
-              <p class="news-excerpt">
-                Kompaniyamiz atrof-muhitga do‘stona ishlab chiqarish usullarini
-                joriy etgani uchun e’tirof etildi.
-              </p>
-              <a href="#" class="news-link"
-                >Ko'proq <i class="fas fa-arrow-right"></i
-              ></a>
-            </div>
-          </article>
-
-          <article class="news-card">
-            <div class="news-image">
-              <img src="images/salt-2.jpg" alt="News 2" />
-              <div class="news-date">
-                <span class="date-day">02</span>
-                <span class="date-month">May</span>
-              </div>
-            </div>
-            <div class="news-content">
-              <h3 class="news-title">Yangi mahsulot turkumining taqdimoti</h3>
-              <p class="news-excerpt">
-                Organik o‘simliklar va ziravorlar bilan boyitilgan yangi tuz
-                turlarimizni taqdim etamiz...
-              </p>
-              <a href="#" class="news-link"
-                >Ko'proq <i class="fas fa-arrow-right"></i
-              ></a>
-            </div>
-          </article>
-
-          <article class="news-card">
-            <div class="news-image">
-              <img src="images/salt-3.jpg" alt="News 3" />
-              <div class="news-date">
-                <span class="date-day">18</span>
-                <span class="date-month">Apr</span>
-              </div>
-            </div>
-            <div class="news-content">
-              <h3 class="news-title">
-                Amerikaning yulduzli oshpazlari bilan hamkorlik
-              </h3>
-              <p class="news-excerpt">
-                Kristall dunyoga mashhur oshpazlar bilan birgalikda yuqori
-                sifatli osh tuzlarini ishlab chiqmoqda...
-              </p>
-              <a href="#" class="news-link"
-                >Ko'proq <i class="fas fa-arrow-right"></i
-              ></a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-      <div class="container">
-        <h2 class="section-title">Biz bilan bog‘laning</h2>
-        <p class="section-subtitle">Sizning fikringiz biz uchun muhim</p>
-
-        <div class="contact-content">
-          <div class="contact-info">
-            <div class="info-item">
-              <div class="info-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div class="info-text">
-                <h4>Address</h4>
-                <p>Samarkand, Uzbekistan</p>
-              </div>
-            </div>
-
-            <div class="info-item">
-              <div class="info-icon">
-                <i class="fas fa-phone-alt"></i>
-              </div>
-              <div class="info-text">
-                <h4>Telefon nomer</h4>
-                <p>+998 (95)-067-36-55</p>
-              </div>
-            </div>
-
-            <div class="info-item">
-              <div class="info-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="info-text">
-                <h4>Email</h4>
-                <p>baxacap@gmail.com</p>
-              </div>
-            </div>
-
-            <div class="social-links">
-              <a href="#" class="social-link"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="social-link"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="#" class="social-link"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a href="#" class="social-link"
-                ><i class="fab fa-pinterest-p"></i
-              ></a>
-            </div>
-          </div>
-
-          <form class="contact-form">
-            <div class="form-group">
-              <input type="text" placeholder="Ismingiz" required />
-            </div>
-            <div class="form-group">
-              <input type="email" placeholder="Elektron pochta" required />
-            </div>
-            <div class="form-group">
-              <textarea placeholder="Arizangiz" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Jo'nating</button>
-          </form>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <div class="footer-grid">
+        <div class="footer-content">
           <div class="footer-col">
-            <img
-              src="images/logo.svg"
-              alt="Kristall Logo"
-              class="footer-logo"
-            />
+            <div class="footer-logo">
+              <img src="images/logo.png" alt="Kristall Logo" />
+              <span>Kristall</span>
+            </div>
             <p>
-              2001-yildan beri premium tuz mahsulotlarini taqdim etamiz. Toza,
-              tabiiy va barqaror manbalardan olingan.
+              2004 yildan beri yuqori sifatli tuz mahsulotlari bilan ta'minlash.
+              Sof, tabiiy va barqaror manba.
             </p>
             <div class="footer-social">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
+              <span>Bizga obuna bo'ling:</span>
+              <div class="social-links">
+                <a href="#" class="social-link"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
             </div>
           </div>
-
           <div class="footer-col">
-            <h4 class="footer-title">Tezkor havola</h4>
-            <ul class="footer-links">
-              <li><a href="#home">Asosiy</a></li>
-              <li><a href="#about">Biz haqimizda</a></li>
-              <li><a href="#products">Mahsulotlarimiz</a></li>
-              <li><a href="#news">Yangiliklar</a></li>
-              <li><a href="#contact">Kontakt</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4 class="footer-title">Mahsulotlarimiz</h4>
-            <ul class="footer-links">
-              <li><a href="#">Himalayan Pink Salt</a></li>
-              <li><a href="#">Sea Salt</a></li>
-              <li><a href="#">Black Salt</a></li>
-              <li><a href="#">Infused Salts</a></li>
-              <li><a href="#">Bath Salts</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4 class="footer-title">"So‘nggi yangiliklar</h4>
+            <h4>Yangiliklar xabarnomasi</h4>
             <p>
-              So‘nggi yangiliklar va takliflardan xabardor bo‘lish uchun axborot
-              xabarnomamizga obuna bo‘ling.
+              Eng so'nggi yangilanishlar va takliflar uchun yangiliklar
+              xabarnomasiga obuna bo'ling.
             </p>
             <form class="newsletter-form">
-              <input type="email" placeholder="Emailingiz" required />
+              <input
+                type="email"
+                placeholder="Elektron pochta manzilingiz"
+                required
+              />
               <button type="submit"><i class="fas fa-paper-plane"></i></button>
             </form>
           </div>
         </div>
-
         <div class="footer-bottom">
-          <p>&copy; 2025 Diyor Khasanov. Barcha huquqlar himoyalangan.</p>
-          <div class="footer-legal">
-            <a href="#">Maxfiylik siyosati </a>
-            <a href="#">Xizmat ko‘rsatish shartlari</a>
+          <div class="copyright">
+            &copy; 2025 Diyor Khasanov. Barcha huquqlar himoyalangan.
+          </div>
+          <div class="footer-links">
+            <a href="#">Maxfiylik siyosati</a>
+            <a href="#">Xizmat shartlari</a>
           </div>
         </div>
       </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
     <script src="js/main.js"></script>
     <script src="js/slider.js"></script>
-    <script src="js/theme.js"></script>
+    <script src="js/theme-toggle.js"></script>
   </body>
 </html>

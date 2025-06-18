@@ -1,106 +1,125 @@
-.contact {
-  background: linear-gradient(
-    135deg,
-    rgba($primary-color, 0.05) 0%,
-    rgba($secondary-color, 0.05) 100%
-  );
+.contact-section {
+  background-color: $white;
 
-  &-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+  .dark-theme & {
+    background-color: $dark-card;
+  }
+}
 
-    @include responsive(md) {
-      grid-template-columns: 1fr;
+.contact-content {
+  display: flex;
+  gap: 3rem;
+
+  .contact-info {
+    flex: 1;
+  }
+
+  .contact-form {
+    flex: 1;
+  }
+}
+
+.info-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  .info-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba($primary-color, 0.1);
+    color: $primary-color;
+    border-radius: $border-radius-circle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+
+    .dark-theme & {
+      background-color: rgba($primary-color, 0.2);
     }
   }
 
-  &-info {
-    .info-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: $spacing-unit * 1.5;
+  .info-text {
+    h4 {
+      font-family: $secondary-font;
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+      color: $dark-color;
 
-      &:last-child {
-        margin-bottom: 0;
+      .dark-theme & {
+        color: $white;
       }
     }
 
-    .info-icon {
-      width: 3rem;
-      height: 3rem;
-      background-color: $primary-color;
-      color: white;
-      border-radius: 50%;
-      @include flex-center;
-      margin-right: $spacing-unit;
-      flex-shrink: 0;
-    }
-
-    h4 {
-      font-size: 1.1rem;
-      margin-bottom: 0.25rem;
-    }
-
     p {
-      color: $gray-color;
-    }
-  }
+      color: $text-light;
 
-  .social-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: $spacing-unit * 2;
-
-    .social-link {
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 50%;
-      background-color: $light-gray;
-      color: $gray-color;
-      @include flex-center;
-      transition: $transition-fast;
-
-      &:hover {
-        background-color: $primary-color;
-        color: white;
-        transform: translateY(-3px);
+      .dark-theme & {
+        color: lighten($dark-text, 20%);
       }
     }
   }
 }
 
-.contact-form {
-  background-color: white;
-  padding: $spacing-unit * 2;
-  border-radius: $border-radius-lg;
-  box-shadow: $shadow-sm;
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2rem;
 
-  @include responsive(sm) {
-    padding: $spacing-unit;
+  .social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: $border-radius-circle;
+    background-color: rgba($primary-color, 0.1);
+    color: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $transition-fast;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.contact-form {
+  background-color: $light-color;
+  padding: 2rem;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-md;
+
+  .dark-theme & {
+    background-color: darken($dark-card, 2%);
   }
 
   .form-group {
-    margin-bottom: $spacing-unit * 1.5;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    margin-bottom: 1.5rem;
   }
 
   input,
   textarea {
     width: 100%;
     padding: 0.75rem 1rem;
-    border: 1px solid $light-gray;
+    border: 1px solid #ddd;
     border-radius: $border-radius-md;
     font-family: $primary-font;
     transition: $transition-fast;
 
+    .dark-theme & {
+      background-color: lighten($dark-card, 5%);
+      border-color: lighten($dark-card, 10%);
+      color: $dark-text;
+    }
+
     &:focus {
       outline: none;
       border-color: $primary-color;
-      box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+      box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
     }
   }
 
@@ -111,5 +130,11 @@
 
   button[type="submit"] {
     width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-content {
+    flex-direction: column;
   }
 }
