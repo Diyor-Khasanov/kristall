@@ -125,3 +125,23 @@ document.addEventListener("DOMContentLoaded", function () {
       observer.observe(el);
     });
 });
+
+const tg = window.Telegram.WebApp;
+
+// WebAppni ishga tushirish
+tg.expand();
+tg.MainButton.setText("Yuborish").show();
+
+tg.MainButton.onClick(() => {
+  const formData = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
+
+  // Ma'lumotlarni Telegramga yuborish
+  tg.sendData(JSON.stringify(formData));
+
+  // WebAppni yopish
+  tg.close();
+});
