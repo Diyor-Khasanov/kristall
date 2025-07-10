@@ -205,7 +205,7 @@ ul {
   width: 100%;
 }
 .nav-menu .nav-item .nav-link.active {
-  color: #E82839;
+  color: #e82839;
 }
 
 .theme-toggle-container {
@@ -307,6 +307,16 @@ ul {
     right: 0;
   }
 }
+.language-switcher select {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.dark-theme .language-switcher select {
+  background-color: rgba(30, 30, 30, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
 .home-section {
   height: 100vh;
   min-height: 600px;
@@ -381,7 +391,7 @@ ul {
   color: #fff;
 }
 .about-content .about-text p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: #333;
 }
 .dark-theme .about-content .about-text p {
@@ -1047,4 +1057,69 @@ ul {
   .container {
     max-width: 1320px;
   }
+}
+.faq-section {
+  padding: 60px 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s;
+}
+.faq-section .section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.faq-section .section-header h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+.faq-section .section-header p {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+.faq-section .faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.faq-section .faq-list .faq-item {
+  background: var(--faq-bg);
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.faq-section .faq-list .faq-item .faq-question {
+  background: none;
+  border: none;
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: var(--text-color);
+}
+.faq-section .faq-list .faq-item .faq-question i {
+  transition: transform 0.3s;
+}
+.faq-section .faq-list .faq-item .faq-question.active i {
+  transform: rotate(180deg);
+}
+.faq-section .faq-list .faq-item .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: var(--faq-bg-dark);
+  transition: max-height 0.4s ease;
+  padding: 0 20px;
+}
+.faq-section .faq-list .faq-item .faq-answer p {
+  padding: 15px 0;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+.faq-section .faq-list .faq-item .faq-question.active + .faq-answer {
+  max-height: 200px;
 }/*# sourceMappingURL=style.css.map */

@@ -77,7 +77,7 @@
       }
 
       &.active {
-        color: #E82839;
+        color: #e82839;
       }
     }
   }
@@ -197,5 +197,14 @@
     &.active {
       right: 0;
     }
+  }
+}
+.language-switcher select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  .dark-theme & {
+    background-color: rgba($dark-card, 0.9);
+    box-shadow: 0 2px 10px rgba($black, 0.3);
+    color: $white;
   }
 }
