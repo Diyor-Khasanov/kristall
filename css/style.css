@@ -1122,4 +1122,14 @@ ul {
 }
 .faq-section .faq-list .faq-item .faq-question.active + .faq-answer {
   max-height: 200px;
+}
+
+* ::-moz-selection {
+  background: #e82839;
+  color: #fff;
+}
+
+* ::selection {
+  background: #e82839;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
