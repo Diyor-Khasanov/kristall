@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -1124,11 +1125,76 @@ ul {
   max-height: 200px;
 }
 
+.language-switcher {
+  position: relative;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+}
+
+.language-switcher select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 8px 32px 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Primary color for light theme */
+.language-switcher select {
+  border-color: #e82839;
+}
+
+.language-switcher select:focus {
+  border-color: #e82839;
+  box-shadow: 0 0 0 2px rgba(232, 40, 57, 0.2);
+}
+
+/* Custom dropdown arrow */
+.language-switcher::after {
+  content: "▼";
+  font-size: 10px;
+  color: #e82839;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Dark theme styles */
+[data-theme=dark] .language-switcher select {
+  background-color: #333;
+  color: #fff;
+  border-color: #e82839;
+}
+
+[data-theme=dark] .language-switcher::after {
+  color: #e82839;
+}
+
+/* Hover effects */
+.language-switcher select:hover {
+  border-color: #c51f2e;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .language-switcher select {
+    padding: 6px 28px 6px 10px;
+    font-size: 13px;
+  }
+}
 * ::-moz-selection {
   background: #e82839;
   color: #fff;
 }
-
 * ::selection {
   background: #e82839;
   color: #fff;
