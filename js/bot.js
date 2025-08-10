@@ -19,7 +19,7 @@ document
     try {
       // Telegram Bot API so'rovini yuboramiz
       const BOT_TOKEN = "7934129067:AAGMZnKP-0bvAlFRcb_cYEWM2Ds4wDsp2ug";
-      const CHAT_ID = "7307299784"; // O'zgartiring!
+      const CHAT_ID = "805248767"; // O'zgartiring!
 
       const text = `📞 <b>Yangi murojaat!</b>\n\n👤 <b>Ism:</b> ${formData.name}\n📱 <b>Telefon:</b> ${formData.tel}\n\n📝 <b>Xabar:</b>\n${formData.message}`;
 
